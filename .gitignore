@@ -1,0 +1,24 @@
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# MATLAB
+*.asv
+*.m~
+slprj/
+codegen/
+
+# Ansys / Fluent working files
+*.cas
+*.cas.h5
+*.dat
+*.dat.h5
+*.flprj
+*.wbpj
+*.wbpz
+*.lock
+*_files/
+
+# Temporary output
+*.tmp
+*.log
