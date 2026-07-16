@@ -1,15 +1,22 @@
 # Numerical Flow Simulation
 
-Collaborative coursework completed for **ME-474 — Numerical Flow Simulation** at **EPFL** during the **Fall 2025 semester**.
+Collaborative coursework completed for **ME-474 Numerical Flow Simulation** at **EPFL** during the **Fall 2025 semester**.
 
-**Team:** Stefano Bernasconi, Francesco Derme, Pietro Fumagalli, and Yanpeng Zhang.
-
-This repository collects two complementary computational fluid-dynamics projects:
+This repository collects two computational fluid dynamics projects:
 
 1. a MATLAB finite-volume solver for steady heat transport in a plane channel;
-2. an Ansys Fluent investigation of the aerodynamic performance of single and multi-airfoil configurations.
+2. an Ansys Fluent investigation of the aerodynamic performance of single- and multi-airfoil configurations.
 
-The repository is organized as a portfolio copy of the original course work. It highlights the numerical methods, validation procedures, and physical interpretation developed by the group.
+The repository is organized as a portfolio copy of the original coursework. It highlights the numerical methods, validation procedures, and physical interpretation developed by the group.
+
+## Authors
+
+- Stefano Bernasconi
+- Francesco Derme
+- Pietro Fumagalli
+- Yanpeng Zhang
+
+This work was completed collaboratively by the four authors listed above. Its inclusion in a personal GitHub portfolio does not imply exclusive authorship by the repository maintainer.
 
 ---
 
@@ -17,7 +24,11 @@ The repository is organized as a portfolio copy of the original course work. It 
 
 <p align="center">
   <img src="figures/channel_temperature_field.png" width="900"
-       alt="Temperature field computed in a heated two-dimensional channel">
+       alt="Temperature field computed with the finite-volume solver in a heated two-dimensional channel">
+</p>
+
+<p align="center">
+  <em>Figure 1 — Temperature field in a heated two-dimensional plane channel, computed using the MATLAB finite-volume solver. The colder inlet flow is progressively heated by the upper and lower walls.</em>
 </p>
 
 The first project develops a two-dimensional solver in **MATLAB** for the steady advection–diffusion equation governing a passive temperature field in a plane channel with fully developed laminar flow.
@@ -49,7 +60,11 @@ The project also examines numerical artifacts caused by outlet boundary conditio
 
 <p align="center">
   <img src="figures/biplane_pressure_contour.png" width="850"
-       alt="Static-pressure contour around two vertically aligned NACA 4412 airfoils">
+       alt="Static-pressure contours around two vertically aligned NACA 4412 airfoils">
+</p>
+
+<p align="center">
+  <em>Figure 2 — Static-pressure contours around two vertically aligned NACA 4412 airfoils. The pressure distribution illustrates the aerodynamic interaction and shielding effects generated within the inter-wing region.</em>
 </p>
 
 The second project studies the flow around a **NACA 4412** airfoil using **Ansys Fluent 2024 R2**. A single-airfoil reference configuration is first established and then compared with tandem and vertically stacked two-airfoil arrangements.
@@ -101,24 +116,3 @@ The report also documents the limitations of steady RANS simulations in the post
 └── reports/
     ├── finite_volume_channel_solver_report.pdf
     └── multi_configuration_airfoil_study.pdf
-```
-
-## Running the MATLAB study
-
-Open `code/finite_volume_channel_solver.m` in MATLAB and run the complete script or the individual sections marked in the file. The physical parameters, mesh sizes, boundary conditions, and Péclet number can be modified near the beginning of the script.
-
-The implementation intentionally assembles the finite-volume system explicitly for clarity. Fine meshes therefore require substantially more memory than an equivalent sparse implementation.
-
-## Reproducibility and scope
-
-The MATLAB project is reproducible from the included source file and has no external data dependency.
-
-The native Ansys project, mesh, case, and data files are not included in this portfolio repository. The complete numerical setup, convergence criteria, mesh specifications, validation procedure, and results are documented in the corresponding report.
-
-## Authorship
-
-This work was completed collaboratively by the four team members listed above. Its inclusion in a personal GitHub portfolio does not imply exclusive authorship by the repository maintainer.
-
-## Usage
-
-The material is provided for academic and portfolio purposes. No explicit open-source license is granted unless one is added separately.
